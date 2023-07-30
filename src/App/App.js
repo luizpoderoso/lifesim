@@ -1,8 +1,17 @@
+import { useEffect, useState } from "react";
+import Create from "./components/Create";
+
 const App = () => {
+  const [profile, setProfile] = useState(); // character
+  
+  useEffect(() => {
+    console.log(profile);
+  }, [profile])
+
   return (
-    <>
-      <h1 className="text-6xl">Life Sim</h1>
-    </>
+    <div className="w-screen h-screen bg-zinc-800">
+      {profile ? null : <Create setProfile={setProfile} />}
+    </div>
   );
 };
 

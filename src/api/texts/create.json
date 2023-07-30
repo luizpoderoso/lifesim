@@ -1,0 +1,19 @@
+{
+    "title": "Crie seu Personagem",
+    "placeholders": {
+        "name": "Digite seu nome...",
+        "surname": "Digite seu sobrenome..."
+    },
+    "gender": {
+        "man": "Homem",
+        "woman": "Mulher"
+    },
+    "countries": {
+        "brazil": "Brasil"
+    },
+    "submit": "Criar",
+    "alerts": {
+        "gender": "Você não escolheu nenhum gênero",
+        "country": "Você não escolheu nenhum país"
+    }
+}

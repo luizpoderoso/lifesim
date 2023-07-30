@@ -1,0 +1,13 @@
+{
+    "create": {
+        "title": "Crie seu Personagem",
+        "placeholders": {
+            "name": "Digite seu nome...",
+            "surname": "Digite seu sobrenome..."
+        },
+        "select": {
+            "man": "Homem",
+            "woman": "Mulher"
+        }
+    }
+}
