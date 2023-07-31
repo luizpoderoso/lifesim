@@ -8,6 +8,9 @@ const Create = ({ setProfile }) => {
   const [gender, setGender] = useState('');
   const [country, setCountry] = useState('');
 
+  useEffect(() => { name.length === 1 && name !== name.toUpperCase() && setName(name.toUpperCase()); }, [name]);
+  useEffect(() => { surname.length === 1 && surname !== surname.toUpperCase() && setSurname(surname.toUpperCase()); }, [surname]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
