@@ -1,0 +1,18 @@
+{
+    "good": [
+        "Seus pais decidem, após um longo tempo juntos, finalmente terem um{uarticle} filh{article}. Você veio como resposta a esse desejo deles. Que sorte!",
+        "Você foi concebid{article} durante uma bela viagem de seus pais ao exterior. Que alegria!",
+        "Após uma trágica morte de seus pais em um acidente de carro, você foi adotad{article} por um casal que te ama muito! Sinta-se honrad{article}."
+    ],
+    "bad": [
+        "Você foi rejeitad{article} pelos seus pais biológicos, que não possuíam condição suficiente para criar uma criança.",
+        "Você foi rejeitad{article} pelos seus pais biológicos, que choraram ao ver o quão fei{article} você é.",
+        "Seus pais biológicos morreram em um acidente de carro. Os seus padrinhos decidiram criá-l{article} visando a herança que os seus progenitores te deixaram.",
+        "Seus pais biológicos morreram de desgosto ao ver você quando nasceu.",
+        "Você tem uma bela história de concebimento. Seus pais tinham acabado de divorciar, até que sua mãe, infelizmente, descobriu que estava grávida de você. Seus pais se reuniram para cuidar do único vestígio do amor que eles um dia sentiram um pelo outro."
+    ],
+    "normal": [
+        "Você tem uma bela história de concebimento. Seus pais viajavam ao exterior e sua mãe encontrou um outro homem. Você é fruto desses encontros que seu pai de criação nunca saberá da existência.",
+        "Ui, que picante! Seus pais, tão tímidos na cama, decidiram tentar posições novas. Você é fruto de um amor selvagem em cima de uma máquina de lavar."
+    ]
+}
