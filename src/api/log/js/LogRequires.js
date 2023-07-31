@@ -5,6 +5,8 @@ export default class Log {
         this.gender = gender
     }
 
+    makeLine = (line, age) => ((`Idade: ${age}{break}${line}`));
+
     birth(hapiness) {
         if (hapiness > 100 || hapiness < 0) return false;
         const birth = require('../json/birth.json');
@@ -21,6 +23,15 @@ export default class Log {
             line = birth.normal[index];
         }
         line = correctGender(this.gender, line);
-        return line;
+        return this.makeLine(line, 0);
+    };
+
+    event(age) {
+        const events = require('../json/events.json');
+
+        const index = Math.floor(Math.random() * events.length);
+        let line = events[index];
+        line = correctGender(this.gender, line);
+        return this.makeLine(line, age);
     }
 }

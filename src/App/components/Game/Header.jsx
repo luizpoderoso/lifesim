@@ -10,7 +10,7 @@ const Header = () => {
     return(
         <header className="container w-full h-[64px] flex items-center justify-center text-xl bg-zinc-800">
             <nav className="inline-flex space-x-8">
-                <NavLink to="/settings" className={({isActive}) => isActive ? classNames.active : classNames.link}>{texts.home}</NavLink>
+                <NavLink to="/settings" className={({isActive}) => isActive ? classNames.active : classNames.link}>{texts.settings}</NavLink>
                 <NavLink to="/relationships" className={({isActive}) => isActive ? classNames.active : classNames.link}>{texts.relations}</NavLink>
                 <NavLink to="/" className={({isActive}) => isActive ? classNames.active : classNames.link}>{texts.home}</NavLink>
                 <NavLink to="/work" className={({isActive}) => isActive ? classNames.active : classNames.link}>{texts.work}</NavLink>
