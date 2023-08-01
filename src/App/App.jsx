@@ -10,7 +10,7 @@ const App = () => {
   }, [profile])
 
   return (
-    <div className="w-screen h-screen flex flex-col bg-zinc-700">
+    <div className="relative w-screen h-screen flex flex-col bg-zinc-700">
       {profile ? <Game profile={profile} /> : <Create setProfile={setProfile} />}
     </div>
   );

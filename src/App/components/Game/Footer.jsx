@@ -1,14 +1,27 @@
+import { useState } from "react";
+import Modal from "./Modal";
+
 const Footer = ({ profile, age, setAge, stat, setStat, log, setLog, requireLog }) => {
+    const texts = require('../../../api/texts/footer.json');
+    const [modal, setModal] = useState({});
+
     const handleAgeClick = () => {
         setAge(age + 1);
         setStat(statChange(stat));
         setLog([requireLog.event(age + 1), ...log]);
     }
 
+    const handleNameClick = () => {
+        setModal({
+            title: texts["modal-title"]
+        })
+    }
+
     return (
         <footer className="container flex justify-center items-center py-2 bg-zinc-800">
             <button onClick={handleAgeClick} className="w-[48px] h-[48px] rounded-md flex items-center justify-center text-4xl bg-zinc-900">+</button>
-            <span className="ml-2 text-2xl">{profile.name} {profile.surname}</span>
+            <button onClick={handleNameClick} className="ml-2 text-2xl">{profile.name} {profile.surname}</button>
+            {Object.keys(modal).length !== 0 && <Modal modal={modal} setModal={setModal} />}
         </footer>
     );
 };

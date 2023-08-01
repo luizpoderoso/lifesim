@@ -1,8 +1,11 @@
-[
-    "Você acordou com um sentimento revolucionário, hoje as coisas serão diferentes! Hoje você irá mudar o mundo!",
-    "Teve um dia que você acordou feliz, tomou um café e se sentiu importante, pena que você não é.",
-    "Ao ver o noticiário diário da TV Pombo, você cogitou que poderia mudar o mundo, talvez você realmente possa.",
-    "Você sente que sua família se importa com você.",
-    "Você percebe o quão ric{article} de alegria você é.",
-    "Recentemente sua vida ganhou sentido, que bom!"
-]
+{
+    "events": [
+        "Você acordou com um sentimento revolucionário, hoje as coisas serão diferentes! Hoje você irá mudar o mundo!",
+        "Teve um dia que você acordou feliz, tomou um café e se sentiu importante, pena que você não é.",
+        "Ao ver o noticiário diário da TV Pombo, você cogitou que poderia mudar o mundo, talvez você realmente possa.",
+        "Você sente que sua família se importa com você.",
+        "Você percebe o quão ric{article} de alegria você é.",
+        "Recentemente sua vida ganhou sentido, que bom!"
+    ],
+    "no-event": "Não aconteceu nada de interessante esse ano."
+}

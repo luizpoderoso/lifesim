@@ -27,11 +27,16 @@ export default class Log {
     };
 
     event(age) {
-        const events = require('../json/events.json');
+        const json = require('../json/events.json');
+        let line;
 
-        const index = Math.floor(Math.random() * events.length);
-        let line = events[index];
-        line = correctGender(this.gender, line);
+        const haveEvent = Math.floor(Math.random() * 3);
+        if (!haveEvent) line = json['no-event'];
+        else {
+            const { events } = json;
+            const index = Math.floor(Math.random() * events.length);
+            line = correctGender(this.gender, events[index]);
+        }
         return this.makeLine(line, age);
     }
 }
