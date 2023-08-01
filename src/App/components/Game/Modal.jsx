@@ -1,28 +1,42 @@
+import { useRef } from "react";
+
 const Modal = ({ modal, setModal }) => {
+    const background = useRef();
+    const container = useRef();
+    const header = useRef();
+    const subtitle = useRef();
+    const dvText = useRef();
+
     const closeModal = () => {
-        const TIME_FOR_CLOSE_IN_MS = 1000;
+        const TIME_FOR_CLOSE_IN_MS = 1200;
 
         setTimeout(() => {
             setModal({});
         }, TIME_FOR_CLOSE_IN_MS);
 
-        
+        background.current.className = "absolute bottom-0 w-screen h-screen z-10 opacity-80 animate-fadeOutModalBackground bg-transparent";
+        container.current.className = "w-[750px] h-[600px] z-30 py-3 px-6 rounded-xl animate-fadeOutModal bg-transparent text-transparent";
+        header.current.className = "relative w-full inline-flex animate-fadeOu tModalText";
+        subtitle.current.className = "mt-2 animate-fadeOutModalText";
+        dvText.current.className = "mt-40 animate-fadeOutModalText";
     }
-    
+
     return (
         <>
-            <div className="absolute bottom-0 w-screen h-screen z-10 opacity-80 animate-fadeInModalBackground bg-black">
+            <div ref={background} className="absolute bottom-0 w-screen h-screen z-10 opacity-80 animate-fadeInModalBackground bg-black">
             </div>
             <div className="absolute bottom-0 w-screen h-screen z-20 flex items-center justify-center bg-transparent">
-                <div className="w-[750px] h-[600px] z-30 py-3 px-6 rounded-xl animate-fadeInModal bg-zinc-900 text-zinc-500">
-                    <div className="relative w-full inline-flex">
-                        {modal.title && <h5 className="text-xl uppercase tracking-widest text-center animate-fadeInModalText">{modal.title}</h5>}
-                        <button onClick={closeModal} className="absolute right-0 text-xl animate-fadeInModalText">X</button>
+                <div ref={container} className="w-[750px] h-[600px] z-30 py-3 px-6 rounded-xl animate-fadeInModal bg-zinc-900 text-zinc-500">
+                    <div ref={header} className="relative w-full inline-flex animate-fadeInModalText">
+                        {modal.title && <h5 className="text-xl uppercase tracking-widest text-center">{modal.title}</h5>}
+                        <button onClick={closeModal} className="absolute right-0 text-xl">X</button>
                     </div>
-                    {modal.subtitle && <p className="mt-2 animate-fadeInModalText">{modal.subtitle}</p>}
-                    <div className="mt-40">
+                    <div ref={subtitle} className="mt-2 animate-fadeInModalText">
+                        {modal.subtitle && <p>{modal.subtitle}</p>}
+                    </div>
+                    <div ref={dvText} className="mt-40 animate-fadeInModalText">
                         {modal.stats && modal.stats.split('{break}').map((stat, index) => (
-                            <p key={index} className="animate-fadeInModalText text-2xl">{stat}</p>
+                            <p key={index} className="text-2xl">{stat}</p>
                         ))}
                     </div>
                 </div>

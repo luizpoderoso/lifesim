@@ -13,8 +13,8 @@ module.exports = {
 
         // fade out
         fadeOutModal: "fadeOutModal 1s ease-in-out",
-        fadeOutModalBackground: "fadeOutBackground 1.5s ease-in-out",
-        fadeOutModalText: "fadeOutText 0.5s ease-in-out",
+        fadeOutModalBackground: "fadeOutBackground 1.2s ease-in-out",
+        fadeOutModalText: "fadeOutText 0.4s ease-in-out",
       },
 
       keyframes: theme => ({
