@@ -1,0 +1,21 @@
+[
+    {
+        "min-age": 3,
+        "title": "Festa de Aniversário!",
+        "subtitle": "Eles te amam!",
+        "text": "Seus pais querem te fazer uma festa de aniversário! Ou seja, é hora de festejar (ou não...)! Você aceita a festa?",
+        "stat-change": "hapiness",
+        "buttons": {
+            "yes": {
+                "text": "É claro!",
+                "max-change": 4,
+                "postive-change": 0.9
+            },
+            "no": {
+                "text": "Não, que brega.",
+                "max-change": 0,
+                "positive-change": 1
+            }
+        }
+    }
+]
