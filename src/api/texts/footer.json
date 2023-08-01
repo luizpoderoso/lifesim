@@ -1,3 +1,8 @@
 {
-    "modal-title": "Status"
+    "modal-title": "Você",
+    "modal-subtitle": "Suas características são:",
+    "modal-hapiness": "Felicidade",
+    "modal-healthiness": "Saúde",
+    "modal-smartness": "Inteligência",
+    "modal-lookness": "Beleza"
 }

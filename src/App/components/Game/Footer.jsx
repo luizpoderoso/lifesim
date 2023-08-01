@@ -13,7 +13,11 @@ const Footer = ({ profile, age, setAge, stat, setStat, log, setLog, requireLog }
 
     const handleNameClick = () => {
         setModal({
-            title: texts["modal-title"]
+            title: texts["modal-title"],
+            stats: `${texts["modal-healthiness"]}: ${stat.healthiness}{break}
+                   ${texts["modal-hapiness"]}: ${stat.hapiness}{break}
+                   ${texts["modal-smartness"]}: ${stat.smartness}{break}
+                   ${texts["modal-lookness"]}: ${stat.lookness}{break}`
         })
     }
 
