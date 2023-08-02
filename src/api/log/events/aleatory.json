@@ -9,12 +9,12 @@
             "yes": {
                 "text": "É claro!",
                 "max-change": 4,
-                "postive-change": 0.9
+                "positive-rate": 0.9
             },
             "no": {
                 "text": "Não, que brega.",
-                "max-change": 0,
-                "positive-change": 1
+                "max-change": 1,
+                "positive-rate": 0
             }
         }
     }

@@ -16,18 +16,14 @@ const Game = ({ profile }) => {
     const requireLog = new Log(profile.gender);
     const [log, setLog] = useState([requireLog.birth(stat.hapiness)]);
 
-    const [modal, setModal] = useState({
-        // title: "Título",
-        // text: "texto",
-        // stat: "hapiness-health"
-    })
+    const [modal, setModal] = useState({})
 
     return (
         <>
             <Header />
             <Body profile={profile} log={log} />
-            <Footer profile={profile} age={age} setAge={setAge} stat={stat} setStat={setStat} log={log} setLog={setLog} requireLog={requireLog} />
-            {Object.keys(modal).length !== 0 && <Modal modal={modal} setModal={setModal} />}
+            <Footer profile={profile} age={age} setAge={setAge} stat={stat} setStat={setStat} log={log} setLog={setLog} requireLog={requireLog} setEventModal={setModal} />
+            {Object.keys(modal).length !== 0 && <Modal modal={modal} setModal={setModal} stat={stat} setStat={setStat} />}
         </>
     );
 };

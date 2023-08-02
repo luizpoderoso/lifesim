@@ -10,11 +10,13 @@ module.exports = {
         fadeInModal: "fadeInModal 0.7s ease-in-out",
         fadeInModalBackground: "fadeInBackground 0.5s ease-in-out",
         fadeInModalText: "fadeInText 1.2s ease-in-out",
+        fadeInModalButton: "fadeInText fadeInButton 1.2s ease-in-out",
 
         // fade out
         fadeOutModal: "fadeOutModal 1s ease-in-out",
         fadeOutModalBackground: "fadeOutBackground 1.2s ease-in-out",
         fadeOutModalText: "fadeOutText 0.4s ease-in-out",
+        fadeOutModalButton: "fadeOutText fadeOutButton 0.4s ease-in-out",
       },
 
       keyframes: theme => ({
@@ -35,6 +37,12 @@ module.exports = {
           '100%': { color: theme('colors.zinc.500') }
         },
 
+        fadeInButton: {
+          '0%': { backgroundColor: theme('colors.transparent'), width: '0px', height:'0px' },
+          '50%': { backgroundColor: theme('colors.transparent') },
+          '100%': { backgroundColor: theme('colors.zinc.800'), width: '42%', height:'32px' }
+        },
+
         //fade out
         fadeOutModal: {
           '0%': { width: '750px', height: '600px' },
@@ -50,6 +58,11 @@ module.exports = {
           '0%': { color: theme('colors.zinc.500') },
           '100%': { color: theme('colors.transparent') }
         },
+
+        fadeOutButton: {
+          '0%': { backgroundColor: theme('colors.zinc.800'), width: '42%', height:'32px' },
+          '100%': { backgroundColor: theme('colors.transparent'), width: '0px', height:'0px' }
+        }
       })
 
     },

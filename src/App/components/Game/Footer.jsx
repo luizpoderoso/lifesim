@@ -1,14 +1,20 @@
 import { useState } from "react";
 import Modal from "./Modal";
+import Events from "../../../api/log/js/eventsRequire";
 
-const Footer = ({ profile, age, setAge, stat, setStat, log, setLog, requireLog }) => {
+const Footer = ({ profile, age, setAge, stat, setStat, log, setLog, requireLog, setEventModal }) => {
     const texts = require('../../../api/texts/footer.json');
     const [modal, setModal] = useState({});
 
     const handleAgeClick = () => {
+        const aleatoryEvents = new Events(profile.gender);
+
         setAge(age + 1);
         setStat(statChange(stat));
         setLog([requireLog.event(age + 1), ...log]);
+        
+        const isntModal = Math.floor(Math.random() * 3);
+        if (!isntModal) setEventModal(aleatoryEvents.aleatoryEvent(age));
     }
 
     const handleNameClick = () => {
